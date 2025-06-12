@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="profilee.css">
+    <title>Profil</title>
+    
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <img src="assets/Logo.png" alt="Logo našej spoločnosti">
+        </div>
+        <nav>
+            <ul class="menu">
+                <li><a href="index.html">Domov</a></li>
+                <li><a href="case.html">Nadstavce</a></li>
+                <li><a href="krytka.html">Krytky</a></li>
+                <li><a href="wishlist.html">Wishlist</a></li>
+                <li><a href="cape.html">Plaste</a></li>
+                
+                <li><a href="#" id="cart">Košík (<span id="cart-count">0</span>)</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    
+    <form id="profileForm">
+        <label for="username">Meno a Priezvisko:</label>
+        <input type="text" id="username" name="username" readonly>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" readonly>
+        <label for="role">Rola:</label>
+        <input type="text" id="role" name="role" readonly>
+        
+    </form>
+    <h2>Objednavky : </h2>
+        <div id="orders-container"></div>
+    </div>
+
+   <script src="js/profile.js">
+    
+   </script>
+</body>
+</html>

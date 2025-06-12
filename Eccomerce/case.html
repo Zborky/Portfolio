@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Komponenty pre Barberov</title>
+    <link rel="stylesheet" href="css/produktFinal.css">
+    <link rel="icon" href="assets/Logo.png" type="image/png">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="assets/Logo.png">
+        </div>
+        <nav>
+            <ul class="menu">
+                <li><a href="index.html">Domov</a></li>
+                <li><a href="case.html">Nadstavce</a></li>
+                <li><a href="krytka.html">Krytky</a></li>
+                <li><a href="wishlist.html">Wishlist</a></li>
+                <li><a href="cape.html">Plaste</a></li>
+                <li><a href="#" id="cart">Košík (<span id="cart-count">0</span>)</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        
+
+        <h1>Nase Produkty</h1>
+        <div class="sort-buttons">
+            <button id="sort-asc">Zoradiť od najlacnejších</button>
+            <button id="sort-desc">Zoradiť od najdrahších</button>
+        </div>
+        <div id="product-list" class="product-list"></div>
+    </main>
+
+    <!-- Postranný panel pre košík -->
+<div id="cart-sidebar" class="cart-sidebar">
+  <div class="cart-header">
+      <h3>Produkty v košíku</h3>
+      <button id="close-cart" class="close-btn">✖</button>
+  </div>
+  <ul id="cart-items">
+      <!-- Dynamicky generované položky -->
+  </ul>
+  <div class="cart-footer">
+      <button id="continue-to-order" class="btn order-btn">Pokračovať k objednávke</button>
+  </div>
+</div>
+
+    <footer>
+        <p>&copy; 2024 Komponenty pre Barberov | <a href="OchranaOD.html">Ochrana osobných údajov</a></p>
+    </footer>
+
+    <script src="js/case.js"></script>
+</body>
+</html>
