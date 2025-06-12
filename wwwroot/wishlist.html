@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wishlist</title>
+    <link rel="stylesheet" href="css/wishlist1.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="assets/Logo.png" alt="Logo našej spoločnosti">
+        </div>
+        <nav>
+            <ul class="menu">
+                <li><a href="index.html">Domov</a></li>
+                <li><a href="about.html">O nás</a></li>
+                <li><a href="produkty.html">Obchod</a></li>
+                <li><a href="wishlist.html">Wishlist</a></li>
+                <li><a href="contact.html">Kontakt</a></li>
+                <li><a href="#" id="cart">Košík (<span id="cart-count">0</span>)</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Wishlist</h2>
+        <div id="wishlist-container" class="wishlist-container"></div>
+    </main>
+
+    <!-- Postranný panel pre košík -->
+    <div id="cart-sidebar" class="cart-sidebar">
+        <h3>Produkty v košíku</h3>
+        <ul id="cart-items"></ul>
+        <button id="continue-to-order">Pokračovať k objednávke</button>
+        <button id="close-cart">Zavrieť</button>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Komponenty pre Barberov | <a href="#">Ochrana osobných údajov</a></p>
+    </footer>
+
+    <script src="js/wishlist.js">
+     
+    </script>
+</body>
+</html>
