@@ -1,0 +1,271 @@
+/* Základný reset a globálne nastavenia */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    line-height: 1.6;
+    padding-top: 50px;
+}
+
+/* Hlavička */
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.header-content img {
+    width: 150px;
+    height: auto;
+}
+
+nav ul {
+    list-style: none;
+    padding: 10px 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+nav ul li a:hover {
+    color: #ecf0f1;
+}
+
+/* Titulok stránky */
+h1 {
+    text-align: center;
+    color: #2c3e50;
+    font-size: 32px;
+    margin-top: 100px;
+}
+
+/* Formulár objednávky */
+#orderForm {
+    background-color: #fff;
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #2c3e50;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    color: #333;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    border-color: #3498db;
+    outline: none;
+}
+
+button[type="submit"] {
+    background-color: #3498db;
+    color: white;
+    padding: 15px;
+    font-size: 18px;
+    border: none;
+    border-radius: 4px;
+    width: 100%;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button[type="submit"]:hover {
+    background-color: #2980b9;
+}
+
+/* Košík */
+#cartItemsContainer {
+    background-color: #fff;
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#cartItemsList {
+    list-style: none;
+    margin-top: 20px;
+}
+
+#cartItemsList li {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+/* Košík v navigácii */
+#cart {
+    position: relative;
+}
+
+#cart-count {
+    background-color: #e74c3c;
+    color: white;
+    border-radius: 50%;
+    padding: 5px 10px;
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+/* Produktový zoznam (produkt-list) */
+.product-list {
+    display: flex;
+    flex-wrap: wrap; /* Umožní zobrazenie viacerých riadkov */
+    justify-content: space-between; /* Medzera medzi produktmi */
+    padding: 2rem;
+    background-color: #ffffff;
+}
+
+/* Každý produkt */
+.product {
+    background-color: #f8f8f8;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 15px;
+    padding: 20px;
+    width: calc(33.33% - 30px); /* 3 produkty na riadok, so zohľadnením medzier */
+    box-sizing: border-box;
+    transition: transform 0.3s, box-shadow 0.3s;
+    text-align: center;
+}
+
+/* Efekt pri najetí myšou */
+.product:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Efekt pri najetí myšou */
+.product:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Názov produktu */
+.product h3 {
+    font-size: 1.2em;
+    margin: 0 0 10px 0;
+    color: #333;
+}
+
+/* Popis produktu */
+.product p {
+    font-size: 1em;
+    color: #666;
+    margin: 0 0 10px 0;
+}
+
+/* Cena produktu */
+.product span {
+    font-size: 1.2em;
+    color: #e74c3c;
+    font-weight: bold;
+}
+
+/* Obrázok produktu */
+.product img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin: 10px 0;
+}
+
+
+
+.order-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #ff0000;
+    color: rgb(0, 0, 0);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.order-btn:hover {
+    background-color: #f6f6f6;
+}
+/* Štýl pre tlačidlo "Pridať do wishlistu" */
+.wishlist-btn {
+    background-color: #f0ad4e; 
+    color: white; 
+    border: none; 
+    padding: 10px 20px; 
+    font-size: 14px; 
+    font-weight: bold; 
+    border-radius: 5px; 
+    cursor: pointer; 
+    transition: background-color 0.3s ease; 
+    display: inline-block; 
+    margin-top: 15px; 
+}
+
+/* Responzívne úpravy */
+@media (max-width: 768px) {
+    body {
+        padding-top: 80px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    #orderForm {
+        padding: 20px;
+    }
+
+    button[type="submit"] {
+        padding: 12px;
+    }
+}

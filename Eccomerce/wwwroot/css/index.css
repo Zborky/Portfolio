@@ -1,0 +1,622 @@
+/* Obecné styly */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+   
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+    animation: fadeIn 1s ease-out;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+header {
+    background: #000000;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    height: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6);
+    animation: slideDown 0.5s ease-out;
+}
+
+@keyframes slideDown {
+    0% {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+
+
+@keyframes bounceIn {
+    0% {
+        transform: scale(0.5);
+        opacity: 0;
+    }
+    50% {
+        transform: scale(1.2);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.header-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.header-content img {
+    width: 200px;
+    margin-bottom: 20px;
+    align-items: center;
+    animation: zoomIn 1s ease-out;
+    position: fixed;
+    margin-top: -20px;
+}
+
+@keyframes zoomIn {
+    0% {
+        transform: scale(0.5);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.header-content h1 {
+    color: #ffffff;
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.6);
+    font-size: 24px;
+    animation: fadeInUp 2s ease-in-out;
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+nav {
+    background: #000000;
+    width: 100%;
+    
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+    animation: slideDown 0.5s ease-out;
+    position: fixed;
+    top: 75px; /* Position under the header */
+    left: 0;
+    z-index: 2400;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+    transition: color 0.3s ease;
+    animation: fadeIn 1.5s ease-out;
+}
+
+nav ul li a:hover {
+    color: #03ee4d;
+}
+
+main {
+    flex: 1;
+    padding: 180px 20px 20px;
+    background: rgba(255, 255, 255, 0.859);
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    animation: fadeInUp 1s ease-out;
+}
+
+
+
+@keyframes fadeInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+
+
+
+footer {
+    background: #000;
+    text-align: center;
+    padding: 20px;
+    color: white;
+    margin-top: auto;
+    font-size: 14px;
+    animation: fadeInUp 1.5s ease-out;
+}
+
+footer a {
+    color: #4CAF50;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+
+
+#zoomLens {
+    position: absolute;
+    border: 3px solid #333;
+    width: 120px;
+    height: 120px;
+    visibility: hidden;
+    background-repeat: no-repeat;
+    pointer-events: none;
+    border-radius: 50%;
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.6);
+}
+
+
+/* Media Queries */
+@media (max-width: 768px) {
+    header {
+        height: 120px;
+    }
+
+    .header-content img {
+        width: 200px;
+    }
+
+    .header-content h1 {
+        font-size: 20px;
+    }
+
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    main {
+        padding: 120px 10px 10px;
+    }
+
+  
+}
+
+.container {
+    display: flex;
+    flex-direction: column; /* Umiestni nadpis nad slideshow */
+    align-items: center;    /* Zarovná obsah do stredu */
+    margin-top: 20px;      /* Odstup od vrchu */
+}
+
+h1, h2 {
+    font-size: 60px;
+    font-family: 'Karla', sans-serif;
+    font-weight: lighter;
+    margin: 0;  
+    color: #000000; /* Odstráni predvolené okraje */
+}
+
+.slider-frame {
+    overflow: hidden;
+    height: auto; /* Zmenené na auto */
+    width: 1200px;
+    margin-top: 20px;      
+    padding: 10px;
+    position: relative;
+    display: flex; /* Pridaj flexbox */
+    flex-direction: column; /* Umiestni obsah do stĺpca */
+    align-items: center; /* Centrovanie obsahu */
+}
+
+.slide-images {
+    width: 3600px;
+    height: 800px;
+    margin: 0 0 0 -2400px;
+    position: relative;
+    animation-name: slide_animation;
+    animation-duration: 33s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+.button-container {
+    text-align: center; /* Centrovanie tlačidiel */
+    margin-top: 20px; /* Rozostup nad tlačidlom */
+}
+
+.slider-btn {
+    display: inline-block; /* Zabezpečí, že sa tlačidlo zobrazuje ako blok */
+    padding: 10px 20px; /* Rozostup vnútri tlačidla */
+    background-color: #007bff; /* Farba pozadia */
+    color: white; /* Farba textu */
+    text-decoration: none; /* Odstráni podčiarknutie */
+    border-radius: 5px; /* Zaoblené rohy */
+    transition: background-color 0.3s ease; /* Efekt prechodu */
+}
+
+.slider-btn:hover {
+    background-color: #000000; /* Farba pozadia pri hover */
+}
+
+@keyframes slide_animation {
+    0% {left: 0px;}
+    10% {left: 0px;}
+    20% {left: 1200px;}
+    30% {left: 1200px;}
+    40% {left: 2400px;}
+    50% {left: 2400px;}
+    60% {left: 1200px;}
+    70% {left: 1200px;}
+    80% {left: 0px;}
+    90% {left: 0px;}
+    100% {left: 0px;}
+}
+
+.img-container {
+    height: 800px;
+    width: 1200px;
+    position: relative;
+    float: left;
+}
+
+
+.trendy {
+    display: flex; /* Flexbox na zobrazenie produktov vedľa seba */
+    justify-content: center; /* Zarovnanie na stred */
+    gap: 20px; /* Priestor medzi produktmi */
+  }
+  
+  .product {
+    display: flex;
+    flex-direction: column; /* Umiestnenie obrázku a tlačidla pod sebou */
+    align-items: center; /* Zarovnanie obrázku a tlačidla na stred */
+  }
+  
+  .product img {
+    max-width: 200px; /* Nastav veľkosť obrázka podľa potreby */
+    height: auto; /* Zachovanie pomeru strán */
+    border-radius: 10px; /* Zaoblené rohy */
+    margin-bottom: 10px; /* Medzera medzi obrázkom a tlačidlom */
+  }
+  
+  .btn {
+    display: inline-block;
+    background-color: #000000;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+
+  
+
+@media (max-width: 480px) {
+    .header-content img {
+        width: 150px;
+    }
+
+    .header-content h1 {
+        font-size: 18px;
+    }
+
+}
+
+#cart-details {
+    margin-top: 20px;
+    background: #eeeeee;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(221, 0, 0, 0.1);
+}
+
+.cart-sidebar {
+    position: fixed;
+    right: -350px;
+    top: 220px; /* Pod navbarom */
+    width: 300px;
+    height: calc(100% - 220px); /* Výška zmenšená o header a navbar */
+    background-color: #f50202;
+    box-shadow: -2px 0 5px rgba(0,0,0,0.5);
+    padding: 20px; /* Oprava paddingu */
+    transition: right 0.3s;
+    overflow-y: auto;
+}
+
+.cart-sidebar.active {
+    right: 0;
+}
+
+#cart-items {
+    list-style: none;
+    padding: 0;
+}
+
+#cart-items li {
+    margin-bottom: 10px;
+}
+
+#continue-to-order {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+}
+
+.zoom-lens {
+    position: absolute;
+    border: 1px solid #000; /* alebo iný štýl */
+    width: 100px; /* nastav šírku lupy */
+    height: 100px; /* nastav výšku lupy */
+    visibility: hidden; /* skryť na začiatku */
+    pointer-events: none; /* aby lupy neblokovali kliknutia */
+    background-repeat: no-repeat;
+}
+
+/* Pre mobilné zariadenia */
+@media (max-width: 48px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 30px;
+        left: 0;
+        width: calc(50% - 40px); /* Dva produkty na riadok na menších obrazovkách */
+        background-color: #333;
+        padding: 50px;
+    }
+
+    .nav-links.open {
+        display: flex;
+    }
+
+    .nav-links li {
+        margin: 2px 0;
+        text-align: center;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+}
+
+
+.cart-sidebar {
+    position: fixed;
+    right: -350px;
+    top: 200px; /* Pod navbarom */
+    width: 300px;
+    height: calc(100% - 220px); /* Výška zmenšená o header a navbar */
+    background-color: #f50202;
+    box-shadow: -2px 0 5px rgba(0,0,0,0.5);
+    padding: 20px; /* Oprava paddingu */
+    transition: right 0.3s;
+    overflow-y: auto;
+}
+
+.cart-sidebar.active {
+    right: 0;
+}
+
+#cart-items {
+    list-style: none;
+    padding: 0;
+}
+
+#cart-items li {
+    margin-bottom: 10px;
+}
+
+#continue-to-order {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #000000;
+    color: white;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+}
+
+/* Tlačidlá pre slider */
+.slider-btn {
+    display: inline-block; /* Umožní pridať padding a margin */
+    padding: 10px 20px; /* Vyplnenie okolo textu */
+    margin-top: 15px; /* Rozostup nad tlačidlom */
+    background-color: #007BFF; /* Farba pozadia */
+    color: white; /* Farba textu */
+    font-size: 16px; /* Veľkosť písma */
+    text-decoration: none; /* Odstránenie podčiarknutia */
+    border-radius: 5px; /* Zaoblenie rohov */
+    transition: background-color 0.3s, transform 0.2s; /* Prechod efektov */
+  }
+  
+  /* Efekt po prechode myšou */
+  .slider-btn:hover {
+    background-color: #0056b3; /* Tmavšia farba pozadia po prechode */
+    transform: translateY(-2px); /* Malý posun nahor */
+  }
+  
+  /* Efekt, keď je tlačidlo stlačené */
+  .slider-btn:active {
+    transform: translateY(0); /* Vrátí sa na pôvodné miesto */
+  }
+  
+  /* Alternatívny efekt pre pridané aktívne tlačidlá */
+  .slider-btn:focus {
+    outline: none; /* Odstránenie obrysu */
+    box-shadow: 0 0 0 4px rgba(0, 123, 255, 0.5); /* Jemný efekt okolo tlačidla */
+  }
+
+  /* Kontejner pre produkty */
+#product-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+    margin-top: 200px; /* Spodná marža pre zabezpečenie priestoru pod navigačným panelom */
+}
+
+/* Štýly pre jednotlivé produkty */
+.product {
+    background-color: #f8f8f8;
+    border: 1px solid #000000;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 15px;
+    padding: 20px;
+    width: calc(33.333% - 40px); /* Tri produkty na riadok, s marginom */
+    box-sizing: border-box;
+    transition: transform 0.3s, box-shadow 0.3s;
+    text-align: center;
+}
+
+/* Efekt pri najetí myšou */
+.product:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Názov produktu */
+.product h3 {
+    font-size: 1.2em;
+    margin: 0 0 10px 0;
+    color: #333;
+}
+
+/* Popis produktu */
+.product p {
+    font-size: 1em;
+    color: #666;
+    margin: 0 0 10px 0;
+}
+
+/* Cena produktu */
+.product span {
+    font-size: 1.2em;
+    color: #e74c3c;
+    font-weight: bold;
+}
+
+/* Obrázok produktu */
+.product img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin: 10px 0;
+}
+
+.product {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.order-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #ff0000;
+    color: rgb(0, 0, 0);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.order-btn:hover {
+    background-color: #f6f6f6;
+}
+
+/* Štýl pre tlačidlo "Pridať do wishlistu" */
+.wishlist-btn {
+    background-color: #f0ad4e; 
+    color: white; 
+    border: none; 
+    padding: 10px 20px; 
+    font-size: 14px; 
+    font-weight: bold; 
+    border-radius: 5px; 
+    cursor: pointer; 
+    transition: background-color 0.3s ease; 
+    display: inline-block; 
+    margin-top: 15px; 
+}
+
+/* Hover efekt pre tlačidlo "Pridať do wishlistu" */
+.add-to-wishlist-btn:hover {
+    background-color: #ec971f; /* Tmavšia oranžová pri hover */
+}
+
+/* Aktívny stav tlačidla pri kliknutí */
+.add-to-wishlist-btn:active {
+    background-color: #d58512; /* Ešte tmavšia farba pri kliknutí */
+}
+
+#wishlist-items {
+    list-style: none;
+    padding: 0;
+}

@@ -1,0 +1,143 @@
+/* Reset základného štýlu */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background: linear-gradient(120deg, #3f51b5, #5c6bc0);
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #333333;
+   
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+header .logo img {
+    max-width: 120px;
+}
+
+nav .menu {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav .menu li a {
+    text-decoration: none;
+    color: white;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+nav .menu li a:hover {
+    color: #ffeb3b;
+}
+
+h2 {
+    margin-top: 120px; /* Add margin to account for fixed header */
+    margin-bottom: 20px;
+    font-size: 2rem;
+    color: #fff;
+    text-align: center;
+}
+
+div {
+   
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+    
+    padding: 20px;
+    max-width: 400px;
+    width: 100%;
+    margin-top: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+label {
+    font-size: 1rem;
+    color: #f0f0f0;
+}
+
+input[type="text"],
+input[type="password"] {
+    padding: 10px;
+    border: none;
+    background: #ffffff90;
+    color: #333;
+    font-size: 1rem;
+    width: 100%;
+    border-radius: 5px;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus {
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+button {
+    padding: 10px;
+    border: none;
+    background: #2575fc;
+    color: white;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+button:hover {
+    background: #e03a1f;
+}
+
+/* Chybová hláška */
+p {
+    margin-top: 15px;
+    color: #ffcccc;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+/* Responzivita */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav .menu {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    div {
+        padding: 15px;
+    }
+
+    button {
+        font-size: 0.9rem;
+    }
+}

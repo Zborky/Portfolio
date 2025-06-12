@@ -1,0 +1,308 @@
+/* Telo stránky */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Minimum výšky pre celé okno */
+}
+
+/* Hlavný obsah */
+main {
+    flex: 1; /* Flexibilný obsah, ktorý zaberá voľný priestor */
+    padding: 180px 20px 20px;
+    background: rgba(255, 255, 255, 0.735);
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    animation: fadeInUp 1s ease-out;
+}
+
+h4 {
+    font-size: 1.5rem;
+    margin: 0;
+    color: #f0ad4e;
+}
+
+footer {
+    background-color: #333333;
+    text-align: center;
+    padding: 20px;
+    color: white;
+    font-size: 14px;
+    animation: fadeInUp 1.5s ease-out;
+    margin-top: auto; /* Umiestni footer na spodok */
+    width: 100%;
+}
+
+footer a {
+    color: #4CAF50;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: #333333;
+    color: white;
+}
+
+
+
+.logo img {
+    height: 50px;
+}
+
+.menu {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+    margin: 0;
+    padding: 0;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+
+/* Nastavenie banneru */
+.banner {
+    position: relative;
+    width: 100%;
+    height: 400px; /* Výška bannera */
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.banner-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Obrázok sa proporčne prispôsobí */
+    z-index: 1;
+}
+
+.banner-content {
+    position: relative;
+    z-index: 2; /* Text bude nad obrázkom */
+    text-align: center;
+    color: white;
+    background: rgba(0, 0, 0, 0.5); /* Priehľadný čierny podklad pre lepšiu čitateľnosť */
+    padding: 1rem;
+    border-radius: 5px;
+}
+
+.banner-content h1 {
+    font-size: 2.5rem;
+    margin: 0;
+}
+
+.banner-content p {
+    font-size: 1.2rem;
+    margin-top: 0.5rem;
+}
+.features {
+    display: flex;
+    justify-content: space-around;
+    padding: 2rem;
+    background-color: #f4f4f4;
+}
+
+.feature img {
+    height: 80px;
+}
+
+.product-list {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    padding: 2rem;
+    background-color: #ffffff;
+    
+    
+}
+
+
+
+.contact-cta {
+    text-align: center;
+    padding: 2rem;
+    background-color: #ffffff;
+    color: #333333;
+}
+
+.contact-btn {
+    display: inline-block;
+    padding: 0.5rem 1.5rem;
+    color: white;
+    background-color: #ff6600;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+/* Postranný panel */
+.cart-sidebar {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 300px;
+    height: 100%;
+    background: #ffffff;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    transition: right 0.3s ease-in-out;
+    display: flex;
+    flex-direction: column;
+}
+
+.cart-sidebar.active {
+    right: 0;
+}
+
+.cart-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: #333;
+    color: white;
+}
+
+.cart-header h3 {
+    margin: 0;
+}
+
+.close-btn {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+#cart-items {
+    flex: 1;
+    overflow-y: auto;
+    list-style: none;
+    padding: 1rem;
+    margin: 0;
+    background-color: #666;
+}
+
+#cart-items li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.cart-footer {
+    padding: 1rem;
+    border-top: 1px solid #ddd;
+}
+
+/* Štýly pre jednotlivé produkty */
+.product {
+    background-color: #f8f8f8;
+    
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 15px;
+    padding: 20px;
+    width: calc(33.333% - 40px); /* Tri produkty na riadok, s marginom */
+    box-sizing: border-box;
+    transition: transform 0.3s, box-shadow 0.3s;
+    text-align: center;
+    height: 50%;
+    width: 50%;
+}
+
+/* Efekt pri najetí myšou */
+.product:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Názov produktu */
+.product h3 {
+    font-size: 1.2em;
+    margin: 0 0 10px 0;
+    color: #333;
+    
+}
+
+/* Popis produktu */
+.product p {
+    font-size: 1em;
+    color: #666;
+    margin: 0 0 10px 0;
+    
+}
+
+/* Cena produktu */
+.product span {
+    font-size: 1.2em;
+    color: #e74c3c;
+    font-weight: bold;
+    
+}
+
+/* Obrázok produktu */
+.product img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin: 10px 0;
+   
+}
+
+.product {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.order-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #ff0000;
+    color: rgb(0, 0, 0);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.order-btn:hover {
+    background-color: #f6f6f6;
+}
+
+/* Štýl pre tlačidlo "Pridať do wishlistu" */
+.wishlist-btn {
+    background-color: #f0ad4e; 
+    color: white; 
+    border: none; 
+    padding: 10px 20px; 
+    font-size: 14px; 
+    font-weight: bold; 
+    border-radius: 5px; 
+    cursor: pointer; 
+    transition: background-color 0.3s ease; 
+    display: inline-block; 
+    margin-top: 15px; 
+}

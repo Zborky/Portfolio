@@ -1,0 +1,246 @@
+/* styles.css */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+   
+    background-size: cover;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+    margin: 20px 0;
+}
+
+form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.9); /* Zmieň na priehľadnú bielu */
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #555;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.form-group input:focus {
+    border-color: #0056b3;
+    outline: none;
+}
+
+button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #0056b3;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #004494;
+}
+
+h3 {
+    margin-top: 0;
+    color: #333;
+}
+
+#orderItems {
+    border: 1px solid #ddd;
+    padding: 10px;
+    border-radius: 4px;
+    background-color: #000000;
+    display: block; /* Pridaj, ak by bol display nastavený inak */
+}
+
+#cart-details {
+    margin-top: 20px;
+    background: #eeeeee;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(221, 0, 0, 0.1);
+}
+
+.cart-sidebar {
+    position: fixed;
+    right: -350px;
+    top: 220px; /* Pod navbarom */
+    width: 300px;
+    height: calc(100% - 220px); /* Výška zmenšená o header a navbar */
+    background-color: #f50202;
+    box-shadow: -2px 0 5px rgba(0,0,0,0.5);
+    padding: 20px; /* Oprava paddingu */
+    transition: right 0.3s;
+    overflow-y: auto;
+}
+
+.cart-sidebar.active {
+    right: 0;
+}
+
+#cart-items {
+    list-style: none;
+    padding: 0;
+}
+
+#cart-items li {
+    margin-bottom: 10px;
+}
+
+#continue-to-order {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+}
+
+.cart-sidebar {
+    position: fixed;
+    right: -350px;
+    top: 200px; /* Pod navbarom */
+    width: 300px;
+    height: calc(100% - 220px); /* Výška zmenšená o header a navbar */
+    background-color: #f50202;
+    box-shadow: -2px 0 5px rgba(0,0,0,0.5);
+    padding: 20px; /* Oprava paddingu */
+    transition: right 0.3s;
+    overflow-y: auto;
+}
+
+.cart-sidebar.active {
+    right: 0;
+}
+
+#cart-items {
+    list-style: none;
+    padding: 0;
+}
+
+#cart-items li {
+    margin-bottom: 10px;
+}
+
+header {
+    background: #000000;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    height: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6);
+    animation: slideDown 0.5s ease-out;
+}
+
+.header-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.header-content img {
+    width: 200px;
+    margin-bottom: 20px;
+    align-items: center;
+    animation: zoomIn 1s ease-out;
+    position: fixed;
+    margin-top: -20px;
+}
+
+@keyframes zoomIn {
+    0% {
+        transform: scale(0.5);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.header-content h1 {
+    color: #ffffff;
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.6);
+    font-size: 24px;
+    animation: fadeInUp 2s ease-in-out;
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+nav {
+    background: #000000;
+    width: 100%;
+    
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+    animation: slideDown 0.5s ease-out;
+    position: fixed;
+    top: 75px; /* Position under the header */
+    left: 0;
+    z-index: 2400;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+    transition: color 0.3s ease;
+    animation: fadeIn 1.5s ease-out;
+}
+
+nav ul li a:hover {
+    color: #03ee4d;
+}

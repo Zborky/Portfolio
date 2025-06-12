@@ -1,0 +1,195 @@
+/* Všeobecné nastavenia */
+body {
+    font-family: Arial, sans-serif;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+h1 {
+    text-align: center;
+    color: #000000;
+    margin-top: 60px;
+}
+
+form {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 20px;
+    margin: 20px auto;
+    width: 300px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    color: #000000;
+    margin-bottom: 10px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="number"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+textarea {
+    resize: vertical;
+}
+
+button {
+    background-color: #000000;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+/* Tlačidlo Fetch Products */
+#fetchProducts {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    background-color: #ff0000;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+#fetchProducts:hover {
+    background-color: #000000;
+}
+
+/* Sekcia produktov */
+#productList {
+    display: flex;
+    flex-wrap: wrap; /* Zabezpečí zalomenie, ak nie je dostatok miesta */
+    gap: 20px; /* Priestor medzi jednotlivými produktami */
+    justify-content: center; /* Centrovanie produktov na stred */
+    max-width: 1000px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+#productList div {
+    flex: 1 1 calc(33.333% - 40px); /* Nastaví šírku na tretinu (so započítaným odstupom) */
+    box-sizing: border-box;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    position: relative;
+}
+
+#productList div img {
+    max-width: 100%; /* Obrázky sa prispôsobia veľkosti kontajnera */
+    border-radius: 5px;
+}
+
+#productList div:last-child {
+    border-bottom: none;
+}
+
+/* Tlačidlo Upraviť pod produktom */
+#productList div button {
+    background-color: #000000;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 16px;
+    position: absolute;
+    bottom: 20px; /* Pozícia na spodku produktu */
+    left: 0;
+    right: 0;
+}
+
+#productList div button:hover {
+    background-color: #45a049;
+}
+
+/* Media query pre menšie obrazovky */
+@media (max-width: 800px) {
+    #productList div {
+        flex: 1 1 calc(50% - 40px); /* Dva produkty vedľa seba pre menšie obrazovky */
+    }
+}
+
+@media (max-width: 600px) {
+    #productList div {
+        flex: 1 1 100%; /* Jeden produkt na celý riadok pre veľmi malé obrazovky */
+    }
+}
+    
+
+/* Navbar styles */
+nav {
+    background-color: rgba(51, 51, 51, 0.8); /* Polopriehľadné tmavé pozadie */
+    padding: 1rem; /* Padding okolo navigačného panela */
+    position: fixed; /* Pevná poloha na vrchu stránky */
+    width: 100%; /* Šírka na 100% */
+    top: 0; /* Umiestnenie na vrchu */
+    z-index: 1000; /* Vysoký z-index pre prekrytie iných elementov */
+}
+
+nav ul {
+    list-style: none; /* Odstránenie štýlov zo zoznamu */
+    padding: 0; /* Odstránenie paddingu */
+    margin: 0; /* Odstránenie marginu */
+    display: flex; /* Flexbox pre horizontálne rozloženie */
+    justify-content: center; /* Centrovanie položiek */
+}
+
+nav ul li {
+    margin: 0 20px; /* Medzery medzi položkami */
+}
+
+nav ul li a {
+    color: #ffffff; /* Farba textu */
+    text-decoration: none; /* Odstránenie podčiarknutia */
+    padding: 10px 15px; /* Padding okolo textu */
+    border-radius: 5px; /* Zaoblené rohy */
+    transition: background-color 0.3s, transform 0.2s; /* Efekt pri hover */
+}
+
+nav ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* Svetlé pozadie pri hover */
+    transform: scale(1.05); /* Efekt zväčšenia pri hover */
+}
+
+/* Responsive design */
+@media (max-width: 600px) {
+    nav ul {
+        flex-direction: column; /* Vertikálne rozloženie pre menšie obrazovky */
+        align-items: center; /* Centrovanie položiek */
+    }
+    nav ul li {
+        margin: 10px 0; /* Medzery pre vertikálne položky */
+    }
+}
