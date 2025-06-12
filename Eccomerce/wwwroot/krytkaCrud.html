@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EqBarbersAdmin</title>
+    <link rel="stylesheet" href="css/admin1.css">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <img src="assets/Logo.png" alt="Logo našej spoločnosti, ktorá dodáva komponenty pre barberov" />
+            
+          </div>
+
+
+          <nav>
+            <ul>
+                <li><a href="casecrud.html">PridajCase</a></li>
+                <li><a href="capecrud.html">PridajCape</a></li>
+                <li><a href="krytkaCrud.html">Pridaj Krytku</a></li>
+                <li><a href="trendycrud.html">Pridaj Trend</a></li>
+                <li><a href="index.html">HlavnaStranka</a></li>
+            </ul>
+          </nav>   
+    </header>
+
+    <h1>Pridávanie Krytiek</h1>
+
+    <!-- Create Product Form -->
+    <form id="createProductForm" enctype="multipart/form-data">
+        <h2>Vytvor produkt</h2>
+        <label for="createId">ID produktu:</label>
+        <input type="number" id="createId" name="id" placeholder="Nechajte prázdne pre automatické ID">
+        <label for="createName">Názov:</label>
+        <input type="text" id="createName" name="name" required>
+        <label for="createPrice">Cena:</label>
+        <input type="number" id="createPrice" name="price" required step="0.01">
+        <label for="createDescription">Popis:</label>
+        <textarea id="createDescription" name="description" required></textarea>
+        <label for="createQuantity">Množstvo:</label>
+        <input type="number" id="createQuantity" name="quantity" required>
+        <label for="createImage">Obrázok:</label>
+        <input type="file" id="createImage" name="image">
+
+        <div class="form-group">
+            <label for="kategory">Vyber Kategorie:</label>
+            <select id="category" name="category" required>
+                <option value="Plast">Plaste</option>
+                <option value="Krytky">Krytky</option>
+                <option value="Nadstavce">Nadstavce</option>
+            </select>
+        </div>
+
+        <button type="submit">Pridaj produkt</button>
+    </form>
+
+    <!-- Update Product Form -->
+    <form id="updateProductForm" enctype="multipart/form-data">
+        <h2>Uprav produkt</h2>
+        <input type="hidden" id="updateProductId" name="id">
+        <label for="updateName">Názov:</label>
+        <input type="text" id="updateName" name="name" required>
+        <label for="updatePrice">Cena:</label>
+        <input type="number" id="updatePrice" name="price" required step="0.01">
+        <label for="updateDescription">Popis:</label>
+        <textarea id="updateDescription" name="description" required></textarea>
+        <label for="updateQuantity">Množstvo:</label>
+        <input type="number" id="updateQuantity" name="quantity" required>
+        <label for="updateImage">Obrázok:</label>
+        <input type="file" id="updateImage" name="image">
+        <button type="submit">Uprav produkt</button>
+    </form>
+
+    <!-- Delete Product Form -->
+    <form id="deleteProductForm">
+        <h2>Odstráň produkt</h2>
+        <label for="deleteProductId">Produkt ID:</label>
+        <input type="number" id="deleteProductId" name="id" required>
+        <button type="submit">Vymaž produkt</button>
+    </form>
+
+    <!-- Fetch Products -->
+    <button id="fetchProducts">Zobraz produkty</button>
+    <div id="product-list">
+        <!-- Produkty budú načítané sem -->
+    </div>
+
+    <!-- Script to handle fetching products and forms -->
+    <script src="js/krytkaAdmin.js"></script>
+</body>
+</html>

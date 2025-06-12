@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+    .email-container {
+        max-width: 700px;
+        margin: 20px auto;
+        background-color: #ffffff;
+        border-radius: 15px;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+    }
+
+    .header {
+        background: linear-gradient(135deg, #ff7e5f, #feb47b);
+        padding: 40px 20px;
+        text-align: center;
+        color: #ffffff;
+    }
+
+    .header img {
+        width: 100px;
+        height: auto;
+        margin-bottom: 10px;
+    }
+
+    .header h1 {
+        font-size: 28px;
+        margin: 0;
+        text-transform: uppercase;
+        font-weight: bold;
+    }
+
+    .body {
+        padding: 30px;
+        font-size: 16px;
+        line-height: 1.6;
+        color: #555;
+    }
+
+    .body h2 {
+        font-size: 22px;
+        color: #333;
+        margin-bottom: 15px;
+    }
+
+    .body p {
+        margin-bottom: 15px;
+    }
+
+    .order-details {
+        margin-top: 20px;
+        border-top: 1px solid #e0e0e0;
+        padding-top: 15px;
+    }
+
+    .order-details ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .order-details li {
+        margin-bottom: 10px;
+        padding: 10px;
+        background-color: #f9f9f9;
+        border-radius: 8px;
+        border-left: 4px solid #feb47b;
+    }
+
+    .total {
+        font-size: 20px;
+        font-weight: bold;
+        color: #ff7e5f;
+        margin-top: 20px;
+    }
+
+    .address {
+        margin-top: 20px;
+        padding: 15px;
+        background-color: #f0f4f8;
+        border-radius: 10px;
+    }
+
+    .footer {
+        background-color: #f9f9f9;
+        padding: 20px;
+        text-align: center;
+        font-size: 14px;
+        color: #777;
+        border-top: 1px solid #e0e0e0;
+    }
+
+    .btn {
+        display: inline-block;
+        padding: 12px 25px;
+        background: linear-gradient(135deg, #ff7e5f, #feb47b);
+        color: #ffffff;
+        font-size: 16px;
+        border-radius: 50px;
+        text-decoration: none;
+        font-weight: bold;
+        margin-top: 20px;
+        transition: all 0.3s ease-in-out;
+    }
+
+    .btn:hover {
+        background: linear-gradient(135deg, #feb47b, #ff7e5f);
+        box-shadow: 0 4px 15px rgba(255, 126, 95, 0.3);
+    }
+
+    @media (max-width: 768px) {
+        .header {
+            padding: 30px 15px;
+        }
+
+        .body {
+            padding: 20px;
+        }
+    }
+</style>
+</head>
+<body>
+    <div class="email-container">
+        <div class="header">
+            <img src="assets/Logo.png" alt="Logo">
+            <h1>Potvrdenie objednávky</h1>
+        </div>
+
+        <div class="body">
+            <p>Vážený <strong>{CustomerName}</strong>,</p>
+            <p>Ďakujeme za vašu objednávku! Vaše objednávkové ID je <strong>{OrderId}</strong>.</p>
+
+            <div class="order-details">
+                <h2>Detaily objednávky:</h2>
+                <ul>
+                    {OrderItems} <!-- Dynamicky generované -->
+                </ul>
+            </div>
+
+            <div class="total">
+                Celková cena: <strong>{TotalPrice}</strong>
+            </div>
+
+            <div class="address">
+                <p><strong>Spôsob doručenia:</strong> {ShippingMethod}</p>
+                <p><strong>Adresa na doručenie:</strong><br>{ShippingAddress}</p>
+            </div>
+
+            <a href="#" class="btn">Sledovať objednávku</a>
+        </div>
+
+        <div class="footer">
+            <p>Ďakujeme, že ste si vybrali naše služby.<br>Tento e-mail bol generovaný automaticky. Neodpovedajte naň.</p>
+        </div>
+    </div>
+</body>
+</html>
