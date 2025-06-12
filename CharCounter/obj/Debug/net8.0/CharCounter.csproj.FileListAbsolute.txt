@@ -1,0 +1,14 @@
+C:\Users\Jakub\Desktop\C#2\CharCounter\obj\Debug\net8.0\CharCounter.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Jakub\Desktop\C#2\CharCounter\obj\Debug\net8.0\CharCounter.AssemblyInfoInputs.cache
+C:\Users\Jakub\Desktop\C#2\CharCounter\obj\Debug\net8.0\CharCounter.AssemblyInfo.cs
+C:\Users\Jakub\Desktop\C#2\CharCounter\obj\Debug\net8.0\CharCounter.csproj.CoreCompileInputs.cache
+C:\Users\Jakub\Desktop\C#2\CharCounter\bin\Debug\net8.0\CharCounter.exe
+C:\Users\Jakub\Desktop\C#2\CharCounter\bin\Debug\net8.0\CharCounter.deps.json
+C:\Users\Jakub\Desktop\C#2\CharCounter\bin\Debug\net8.0\CharCounter.runtimeconfig.json
+C:\Users\Jakub\Desktop\C#2\CharCounter\bin\Debug\net8.0\CharCounter.dll
+C:\Users\Jakub\Desktop\C#2\CharCounter\bin\Debug\net8.0\CharCounter.pdb
+C:\Users\Jakub\Desktop\C#2\CharCounter\obj\Debug\net8.0\CharCounter.dll
+C:\Users\Jakub\Desktop\C#2\CharCounter\obj\Debug\net8.0\refint\CharCounter.dll
+C:\Users\Jakub\Desktop\C#2\CharCounter\obj\Debug\net8.0\CharCounter.pdb
+C:\Users\Jakub\Desktop\C#2\CharCounter\obj\Debug\net8.0\CharCounter.genruntimeconfig.cache
+C:\Users\Jakub\Desktop\C#2\CharCounter\obj\Debug\net8.0\ref\CharCounter.dll
