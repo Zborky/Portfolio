@@ -1,0 +1,91 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f8ff; /* Svetlo modré pozadie */
+    margin: 0;
+    padding: 20px;
+}
+
+h1 {
+    color: #2c3e50; /* Tmavomodrá farba textu */
+    text-align: center;
+}
+
+form {
+    display: flex;
+    justify-content: center; /* Vycentruje formulár */
+    margin-bottom: 20px;
+}
+
+input[type="text"] {
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid #3498db; /* Modrý okraj */
+    border-radius: 4px;
+    width: 250px; /* Šírka inputu */
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #3498db; /* Modré pozadie tlačidla */
+    color: white; /* Biela farba textu */
+    border: none;
+    border-radius: 4px;
+    cursor: pointer; /* Zmení kurzor na ruku */
+    margin-left: 10px; /* Medzera medzi inputom a tlačidlom */
+}
+
+button:hover {
+    background-color: #2980b9; /* Tmavší modrý odtieň pri hover */
+}
+
+#weatherResult {
+    text-align: center;
+    margin-top: 20px;
+    padding: 20px;
+    border: 1px solid #3498db; /* Okraj okolo výsledku počasia */
+    border-radius: 4px;
+    background-color: #e6f7ff; /* Svetlo modré pozadie pre výsledky */
+}
+
+#weatherResult h2 {
+    color: #2c3e50; /* Tmavomodrá farba textu pre nadpis */
+}
+
+#weatherResult p {
+    font-size: 18px;
+    color: #34495e; /* Tmavšia farba textu pre popis počasia */
+}
+
+#forecastResult {
+    margin-top: 20px;
+    padding: 20px;
+    border: 1px solid #3498db; /* Okraj okolo predpovede */
+    border-radius: 4px;
+    background-color: #e6f7ff; /* Svetlo modré pozadie pre predpoveď */
+}
+
+#forecastResult h2 {
+    color: #2c3e50; /* Tmavomodrá farba textu pre nadpis predpovede */
+    text-align: center;
+}
+
+#forecastResult ul {
+    list-style-type: none; /* Odstráni odrážky */
+    padding: 0; /* Odstráni vnútorné odsadenie */
+}
+
+#forecastResult li {
+    background-color: #ffffff; /* Biele pozadie pre každý deň */
+    margin: 10px 0; /* Medzera medzi dňami */
+    padding: 10px; /* Odsadenie vnútri */
+    border: 1px solid #3498db; /* Okraj okolo každého dňa */
+    border-radius: 4px; /* Zaoblené rohy */
+    display: flex;
+    justify-content: space-between; /* Vyrovná deň a teplotu */
+}
+
+#forecastResult li span {
+    font-weight: bold; /* Tučný text pre teplotu */
+    color: #3498db; /* Modrá farba pre teplotu */
+}
