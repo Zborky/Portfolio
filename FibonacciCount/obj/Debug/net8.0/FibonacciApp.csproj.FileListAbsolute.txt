@@ -1,0 +1,14 @@
+C:\Users\Jakub\Desktop\Programovanie\C#\FibonacciApp\obj\Debug\net8.0\FibonacciApp.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Jakub\Desktop\Programovanie\C#\FibonacciApp\obj\Debug\net8.0\FibonacciApp.AssemblyInfoInputs.cache
+C:\Users\Jakub\Desktop\Programovanie\C#\FibonacciApp\obj\Debug\net8.0\FibonacciApp.AssemblyInfo.cs
+C:\Users\Jakub\Desktop\Programovanie\C#\FibonacciApp\obj\Debug\net8.0\FibonacciApp.csproj.CoreCompileInputs.cache
+C:\Users\Jakub\Desktop\Programovanie\C#\FibonacciApp\bin\Debug\net8.0\FibonacciApp.exe
+C:\Users\Jakub\Desktop\Programovanie\C#\FibonacciApp\bin\Debug\net8.0\FibonacciApp.deps.json
+C:\Users\Jakub\Desktop\Programovanie\C#\FibonacciApp\bin\Debug\net8.0\FibonacciApp.runtimeconfig.json
+C:\Users\Jakub\Desktop\Programovanie\C#\FibonacciApp\bin\Debug\net8.0\FibonacciApp.dll
+C:\Users\Jakub\Desktop\Programovanie\C#\FibonacciApp\bin\Debug\net8.0\FibonacciApp.pdb
+C:\Users\Jakub\Desktop\Programovanie\C#\FibonacciApp\obj\Debug\net8.0\FibonacciApp.dll
+C:\Users\Jakub\Desktop\Programovanie\C#\FibonacciApp\obj\Debug\net8.0\refint\FibonacciApp.dll
+C:\Users\Jakub\Desktop\Programovanie\C#\FibonacciApp\obj\Debug\net8.0\FibonacciApp.pdb
+C:\Users\Jakub\Desktop\Programovanie\C#\FibonacciApp\obj\Debug\net8.0\FibonacciApp.genruntimeconfig.cache
+C:\Users\Jakub\Desktop\Programovanie\C#\FibonacciApp\obj\Debug\net8.0\ref\FibonacciApp.dll

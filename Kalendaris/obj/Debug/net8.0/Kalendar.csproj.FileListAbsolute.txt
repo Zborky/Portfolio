@@ -1,0 +1,14 @@
+C:\Users\Jakub\Desktop\Kalendaris\bin\Debug\net8.0\Kalendar.exe
+C:\Users\Jakub\Desktop\Kalendaris\bin\Debug\net8.0\Kalendar.deps.json
+C:\Users\Jakub\Desktop\Kalendaris\bin\Debug\net8.0\Kalendar.runtimeconfig.json
+C:\Users\Jakub\Desktop\Kalendaris\bin\Debug\net8.0\Kalendar.dll
+C:\Users\Jakub\Desktop\Kalendaris\bin\Debug\net8.0\Kalendar.pdb
+C:\Users\Jakub\Desktop\Kalendaris\obj\Debug\net8.0\Kalendar.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Jakub\Desktop\Kalendaris\obj\Debug\net8.0\Kalendar.AssemblyInfoInputs.cache
+C:\Users\Jakub\Desktop\Kalendaris\obj\Debug\net8.0\Kalendar.AssemblyInfo.cs
+C:\Users\Jakub\Desktop\Kalendaris\obj\Debug\net8.0\Kalendar.csproj.CoreCompileInputs.cache
+C:\Users\Jakub\Desktop\Kalendaris\obj\Debug\net8.0\Kalendar.dll
+C:\Users\Jakub\Desktop\Kalendaris\obj\Debug\net8.0\refint\Kalendar.dll
+C:\Users\Jakub\Desktop\Kalendaris\obj\Debug\net8.0\Kalendar.pdb
+C:\Users\Jakub\Desktop\Kalendaris\obj\Debug\net8.0\Kalendar.genruntimeconfig.cache
+C:\Users\Jakub\Desktop\Kalendaris\obj\Debug\net8.0\ref\Kalendar.dll
